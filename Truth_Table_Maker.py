@@ -1,4 +1,4 @@
-#Truth Table Maker
+#Truth Table Maker one
 print("""This program will make the truth table for any boolean expression.
 Variables - English Alphabets
 And  .
