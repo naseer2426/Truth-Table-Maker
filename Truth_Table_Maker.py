@@ -63,34 +63,26 @@ while check:
                 next_letter=exp[i+1]
                 if not(exp[i] in variables)and not(exp[i] in ['+','.','(',')',"'"]):
                     return False
-                    break
                 if exp[i] in variables:
                     if (next_letter!='.')and(next_letter!='+')and(next_letter!=')')and(next_letter!="'"):
                         return False
-                        break
                 if exp[i]=='+':
                     if not(next_letter in variables)and(next_letter!='('):
                         return False
-                        break
                 if exp[i]=='.':
                     if not(next_letter in variables)and(next_letter!='('):
                         return False
-                        break
                 if exp[i]=='(':
                     if not(next_letter in variables)and(next_letter!='('):
                         return False
-                        break
                 if exp[i]==')':
                     if (next_letter!='.')and(next_letter!=')')and(next_letter!='+')and(next_letter!="'"):
                         return False
-                        break
                 if exp[i]=="'":
                     if (next_letter!='+')and(next_letter!='.')and(next_letter!=')')and(next_letter!="'"):
                         return False
-                        break
                 if i==(len(exp)-2):
                     return True
-                    break
                 i+=1
     if not(check_expression(exp)) or not(check_brackets(exp)):
         print()
